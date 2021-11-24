@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MoralisProvider } from "react-moralis";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from "@chakra-ui/react";
@@ -15,9 +16,11 @@ const theme = extendTheme({ config })
 ReactDOM.render(
 
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <MoralisProvider appId="2FtsoMeblAuje2aqzu2MDMVn61DwdniclfcJMBhy" serverUrl="https://bsqhsq6jftos.usemoralis.com:2053/server">
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </MoralisProvider>
   </React.StrictMode>,
 
   document.getElementById('root'),
